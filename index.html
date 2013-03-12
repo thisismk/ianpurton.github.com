@@ -2,13 +2,13 @@
 <html>
 
 <head>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://raw.github.com/mdp/gibberish-aes/master/src/gibberish-aes.js"></script>
   <style>
     textarea { width: 600px; height: 400px; }
   </style>
   
-	<title>Gibberish based AES decrypter</title>
+	<title>Free Online AES Tool - Encrypt / Decrypt Text with AES Online</title>
 </head>
 <body>
 	<h1>Online AES Encryptor / Decryptor - AES Tool</h1>
@@ -16,19 +16,21 @@
 
 	<table>
 		<tr>
-			<td>Text to encrypt:</td>
-			<td><textarea id="text" />Enter the text to be encrypted here...</textarea></td>
+			<td>Text to encrypt/decrypt:</td>
+			<td><textarea id="text" />Enter the text to be encrypted or decrypted here...</textarea></td>
 		</tr>
 		<tr>
 			<td>Password:</td>
-			<td><input id="password" value="some password" /></td>
+			<td>
+        <input id="password" value="some password" />
+        <select id="select">
+          <option value="1">Encrypt</option>
+          <option value="2">Decrypt</option>
+        </select>
+      </td>
 		</tr>
 		<tr>
-			<td>Encrypted text:</td>
-			<td><textarea id="encryptedText" readonly="readonly"></textarea></td>
-		</tr>
-		<tr>
-			<td>Decrypted text:</td>
+			<td>Result:</td>
 			<td><textarea id="decryptedText" readonly="readonly"></textarea></td>
 		</tr>
 		<tr>
@@ -41,12 +43,21 @@
 	<script>
 		$('#buttonStart').click(function() {
 			var text = $('#text').val();
+			var ency = $('#encryptedText').val();
 			var pass = $('#password').val();
-			GibberishAES.size(128);
-			var encrypted = GibberishAES.enc(text, pass);
-			$('#encryptedText').val(encrypted);
-			var decrypted = GibberishAES.dec(encrypted, pass);
-			$('#decryptedText').val(decrypted);
+      var sel = $('#select').val();
+      alert(sel);
+			GibberishAES.size(256);
+      if(sel == "1")
+      {
+        var result = GibberishAES.enc(text, pass);
+      }
+      else
+      {
+        var result = GibberishAES.dec(text, pass);
+      }
+  
+			$('#decryptedText').val(result);
 		});
 	</script>
 </body>
