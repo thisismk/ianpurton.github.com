@@ -7,7 +7,7 @@ This is the new (as of writing) google analytics code in HAML.
 
 Remember to swap the YOUR_CODE with your google UA number.
 
-{% highlight javascript }
+{% highlight javascript %}
 :javascript
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', YOUR_CODE']);
@@ -18,4 +18,4 @@ Remember to swap the YOUR_CODE with your google UA number.
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })(); 
-{ endhighlight %}
+{% endhighlight %}
