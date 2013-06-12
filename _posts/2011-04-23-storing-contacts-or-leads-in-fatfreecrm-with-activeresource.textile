@@ -1,0 +1,21 @@
+---
+layout: post
+title: Storing contacts or leads in fatfreecrm with activeresource
+---
+
+I was suprised how easy it was using ActiveResource in Rails to store information in FatFreeCRM. I wanted users who register to my new site to appear as Leads. I ran the script/console session below. Note the username:password combination this is how you get past Restful Authentication.
+
+{% highlight bash %}
+Loading development environment (Rails 2.3.8) 
+>> class Lead < ActiveResource::Base                                                                  
+>> self.site = 'http://username:password@yourfatfreeurl.com/'                                                                  
+>> end
+=> "http://username:password@yourfatfreeurl.com"
+>>
+>> l = Lead.new({ :first_name => 'Des', :last_name => 'Oconner', :email => 'des@oconner.com', :user_id => 1 })
+=> #<Lead:0xb6996068 @attributes={"user_id"=>1, "last_name"=>"Oconner", "first_name"=>"Des", "email"=>"des@oconner.com"}, @pref
+ix_options={}>
+>> l.save
+=> true
+>>
+{% endhighlight %}
