@@ -1,0 +1,22 @@
+99.999% Uptime is difficult to achieve and may not be worth the cost. From the table below, your website would be unreachable for only 5 minutes a year if you are to be called 5 nines or 99.999% available.
+
+Uptime (%)   Downtime
+90%	 876 hours (36.5 days)
+95%	 438 hours (18.25 days)
+99%	 87.6 hours (3.65 days)
+99.9%	 6 hours
+99.99%	 52.56 minutes
+99.999%	 5.256 minutes
+99.9999%	 31.536 seconds
+
+It's very difficult to be 99.999% available.
+
+If you have a hard disk error do you think you could fix it within 5 minutes each year ? probably not. You would need a second system that can step in at times of failure, this backup system would need to copy anything that could possibly fail. You would also need to think about how quickly you can switch from your failed system to your backup.
+
+It's expensive and the money may be better spent elsewhere.
+
+You can use a company or service to configure a high availability system that would meet the needs for 99.999% uptime. But, they are not cheap, high availability systems are complex and require expensive technical skills. Some sites would benefit from expenditure in areas such as usability, performance and design first. Although if your site does go down, an error page that offers to inform the customer when the site is back up would be a nice addition to many sites.
+
+Your customers may not mind lower downtime
+
+Do your customers really need your service to be 99.999% available ?. For most sites I suspect the answer is no, especially when the costs of supplying such availability are taken into account.
