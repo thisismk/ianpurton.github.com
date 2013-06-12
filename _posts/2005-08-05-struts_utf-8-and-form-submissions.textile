@@ -1,0 +1,51 @@
+---
+layout: post
+title: Struts utf 8 and form submissions
+updated: 29 Aug, 2005
+---
+
+Struts will convert data that is received from form submissions to a default encoding because most browsers don't set the content type.
+
+To stop struts mangling the data you need to set the content type with a filter before it gets as far as the struts layer.
+
+Use the filter below
+
+{% highlight bash %}
+package filters;
+
+import java.io.IOException;
+import javax.servlet.*;
+
+public class UTF8Filter implements Filter
+{
+  public void destroy() {}
+
+	public void doFilter(ServletRequest request,
+		ServletResponse response, FilterChain chain)
+		throws IOException, ServletException
+	{
+		request.setCharacterEncoding("UTF8");
+		chain.doFilter(request, response);
+	}
+
+	public void init(FilterConfig filterConfig)
+		throws ServletException
+	{
+	}
+}
+{% endhighlight %}
+
+You'll need to add these settings to your web.xml
+
+{% highlight xml %}
+<filter>
+  <filter-name>UTF8Filter</filter-name>
+	<filter-class>filters.UTF8Filter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>UTF8Filter</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+{% endhighlight %}
+
+Be careful how you view the output of any form submissions, for instance the console on eclipse is not UTF-8 by default.
