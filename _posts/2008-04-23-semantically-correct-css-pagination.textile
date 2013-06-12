@@ -1,0 +1,72 @@
+---
+layout: post
+title: Google analytics in haml
+updated: 23 Apr, 2008
+---
+
+Here I show a method for generating pagination for search results and long list pages using semantically correct HTML and CSS.
+
+%Pagination as HTML Markup%
+
+I've modeled pagination as an un-ordered list of links. There are three class declarations so that I can identify the list "pagination" and the first and last items, "leader" and "last" respectively.
+
+{% highlight html %}
+<ul class="pagination">
+  <li class="first"><a href="?offset=0" ><< First</a>&lt/li>
+  <li><a href="?offset=2"  ><</a></li>
+  <li class="leader">Page 3 of 111</li>
+  <li><a href="?offset=1"  >1</a></li>
+  <li><a href="?offset=2"  >2</a></li>
+  <li><strong>3</strong></li>
+  <li><a href="?offset=4" >4</a></li>
+  <li><a href="?offset=5" >5</a></li>
+  <li><a href="?offset=6" >></a></li>
+  <li class="last"><a href="?offset=110" >Last >></a></li>
+</ul>
+{% endhighlight %}
+
+This markup is fairly straight forward to generate on the fly, but note that you'll need the total count of items so that you can generate the Page 1 of COUNT.
+
+This markup is a lot easier to generate that similar markup built with tables.
+
+%The CSS To Style The Pagination%
+
+{% highlight css %}
+/* Pagination
+--------------------------------- */
+
+ul.paginaton {
+  list-style: none;
+}
+
+ul.pagination li {
+  font-size: smaller;
+  float: left;
+  margin-left: 0px;
+  border-top: 1px solid #006699;
+  border-right: 1px solid #006699;
+  border-bottom: 1px solid #006699;
+  padding: 1px 3px 1px 3px;
+}
+
+ul.pagination li.last, ul.pagination li.last a {
+  background-color: #006699;
+  color: white;
+}
+
+ul.pagination li.first {
+  background-color: #006699;
+  color: white;
+  margin-left: 1px;
+}
+
+ul.pagination li.first a {
+  background-color: #006699;
+  color: white;
+}
+
+ul.pagination li.leader, ul.pagination leader a {
+  background-color: #006699;
+  color: white;
+}
+{% endhighlight %}
