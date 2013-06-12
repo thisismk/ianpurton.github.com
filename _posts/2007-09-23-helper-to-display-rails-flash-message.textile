@@ -1,0 +1,44 @@
+---
+layout: post
+title: Helper to display rails flash messages
+updated: 23 Sep, 2007
+---
+
+A simple code snippet for displaying your flash[:warning] = "Warning Message" messages in rails. Add the following to your application_helper.rb.
+
+{% highlight ruby %}
+def flash_helper
+
+    f_names = [:notice, :warning, :message]
+    fl = ''
+
+    for name in f_names
+      if flash[name]
+        fl = fl + "<div class=\"notice\">#{flash[name]}</div>"
+      end
+    flash[name] = nil;
+  end
+  return fl
+end
+{% endhighlight %}
+
+To show all messages place this code in your view (rhtml).
+
+{% highlight erb %}
+<%= flash_helper %>
+{% endhighlight %}
+
+Also here's some CSS to style the messages.
+
+{% highlight css %}
+div.notice {
+  margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 40%;
+	border: 5px solid #ccc;
+	margin-top: 50px;
+	padding: 20px;
+	font-weight: bold;
+}
+{% endhighlight %}
