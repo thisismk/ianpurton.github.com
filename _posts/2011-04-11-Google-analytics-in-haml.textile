@@ -1,0 +1,21 @@
+---
+layout: post
+title: Google analytics in haml
+---
+
+This is the new (as of writing) google analytics code in HAML.
+
+Remember to swap the YOUR_CODE with your google UA number.
+
+{% highlight javascript }
+:javascript
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', YOUR_CODE']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })(); 
+{ endhighlight %}
