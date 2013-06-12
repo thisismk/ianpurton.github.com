@@ -1,53 +1,13 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Sirupsen and his codeabouts
+---
 
-<head>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://raw.github.com/mdp/gibberish-aes/master/src/gibberish-aes.js"></script>
-  <style>
-    textarea { width: 600px; height: 400px; }
-  </style>
-  
-	<title>Gibberish based AES decrypter</title>
-</head>
-<body>
-	<h1>Online AES Encryptor / Decryptor - AES Tool</h1>
-	<h2>(JavaScript client-side AES cipher implementation)</h2>
-
-	<table>
-		<tr>
-			<td>Text to encrypt:</td>
-			<td><textarea id="text" />Enter the text to be encrypted here...</textarea></td>
-		</tr>
-		<tr>
-			<td>Password:</td>
-			<td><input id="password" value="some password" /></td>
-		</tr>
-		<tr>
-			<td>Encrypted text:</td>
-			<td><textarea id="encryptedText" readonly="readonly"></textarea></td>
-		</tr>
-		<tr>
-			<td>Decrypted text:</td>
-			<td><textarea id="decryptedText" readonly="readonly"></textarea></td>
-		</tr>
-		<tr>
-			<td colspan="2" align="center">
-				<button id="buttonStart">AES Encrypt / Decrypt</button>
-			</td>
-		</tr>
-	</table>
-
-	<script>
-		$('#buttonStart').click(function() {
-			var text = $('#text').val();
-			var pass = $('#password').val();
-			GibberishAES.size(128);
-			var encrypted = GibberishAES.enc(text, pass);
-			$('#encryptedText').val(encrypted);
-			var decrypted = GibberishAES.dec(encrypted, pass);
-			$('#decryptedText').val(decrypted);
-		});
-	</script>
-</body>
-</html>
+<ul id="posts" class="twelve columns offset-by-four">
+  {% for post in site.posts %}
+    <li>
+      <a class="nine columns" href="{{ post.url }}">{{ post.title }}</a>
+      <span class="two columns">{{ post.date | date: "%b %Y" }}</span>
+    </li>
+  {% endfor %}
+</ul>
