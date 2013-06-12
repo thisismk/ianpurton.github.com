@@ -1,0 +1,13 @@
+You'll need to install the latest libevent to get this to work.
+
+{% highlight bash %}
+wget http://monkey.org/~provos/libevent-2.0.6-rc.tar.gz
+cd libevent-2.0.6-rc
+./configure
+./make
+wget http://xph.us/dist/beanstalkd/beanstalkd-1.4.6.tar.gz
+tar -xzvf beanstalkd-1.4.6.tar.gz 
+cd beanstalkd-1.4.6.
+./configure
+./make
+{% endhighlight %}
