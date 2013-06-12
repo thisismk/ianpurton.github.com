@@ -1,3 +1,8 @@
+---
+layout: post
+title: Install beanstalkd on debian lenny
+---
+
 You'll need to install the latest libevent to get this to work.
 
 {% highlight bash %}
