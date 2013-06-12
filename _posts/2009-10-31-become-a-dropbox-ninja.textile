@@ -1,9 +1,0 @@
----
-layout: post
-title: 99999 or 5 nines uptime
-updated: 23 Apr, 2007
----
-
-99.999% Uptime is difficult to achieve and may not be worth the cost. From the table below, your website would be unreachable for only 5 minutes a year if you are to be called 5 nines or 99.999% available.
-
-
