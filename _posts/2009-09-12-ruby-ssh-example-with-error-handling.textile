@@ -1,0 +1,40 @@
+---
+layout: post
+title: Ruby ssh example with error handling
+---
+
+The following ruby snippet takes an array of commands as a parameter then runs all those commands via SSH.
+
+You get back either a string containing an error or a hash that contains the results for each command, where the command is the key.
+
+{% highlight ruby %}
+ def execute_ssh(commands) 
+    begin
+    
+      results = {}
+    
+      Timeout::timeout(2) do
+        begin
+          Net::SSH.start( hostname, username, 
+            :password => password, :port => ssh_port ) do |ssh|
+            
+            commands.each { |command|
+              results[command] = ssh.exec!(command)
+            }
+          end  
+        rescue Net::SSH::HostKeyMismatch => e
+          e.remember_host!
+          retry
+        rescue StandardError => e
+          return e.to_s
+        end
+      end
+    
+      return results
+    
+    rescue Timeout::Error
+      return "Timed out trying to get a connection"
+    end
+  end
+  
+{% endhighlight %}
