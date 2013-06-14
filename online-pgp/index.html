@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  <title>Online PGP</title>
+  <script src="http://code.jquery.com/jquery-1.10.0.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="./openpgp.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./pgp-online.js" type="text/javascript" charset="utf-8"></script>
+ </head>
+  <body>
+    <div class="container">
+      <div class="row">&nbsp;</div>
+      <div class="row">
+        <div class="span12">
+          <h2>Online PGP</h2>
+          <p>Runs completely in the browser.</p>
+          
+          <div class="accordion" id="accordion2">
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                    Generate PGP Keys
+                  </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                  <div class="block">
+                   <form method="post" onsubmit="return generate();" name="myform">
+                     <br />
+                    <input type="submit" name="mybutton" value="Generate Keys" />
+                   </form>
+                  </div>
+                  <div class="block">
+                   <h4>Public key</h4>
+                   <textarea style="width:50%; height: 100px" id="pubgenkey">
+                   </textarea>
+                   <h4>Private key</h4>
+                   <textarea style="width:50%; height: 100px" id="privgenkey">
+                   </textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                    Encrypt a Message
+                  </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div id="title">
+   <p>Encrypt a message</p>
+  </div>
+  <div class="block">
+   <form method="post" onsubmit="return encrypt();" name="myform" >
+     <p>Your message: </p>
+     <textarea style="width:50%; height: 100px" name="message" rows="16" cols="80" id="message">
+Here is my secret message
+     </textarea>
+     <br />
+    <input type="submit" name="mybutton" />
+   </form>
+  </div>
+  <div class="block">
+   <h2>Our public key</h2>
+   <textarea style="width:50%; height: 100px" rows="16" cols="80" id="pubkey">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v.1.20130420
+Comment: http://openpgpjs.org
+
+xk0EUbsdIwEB/2vGKXP+HfhKSmmaIiECdqVpYy9cs4doGWJeWsp/+2IHFaMN
+c/cAY77SrMUUQd8g4Jw6Bh3J8c9ytKZDBtAdKwsAEQEAAc0kVGVzdCBNY1Rl
+c3Rpbmd0b24gPHRlc3RAZXhhbXBsZS5jb20+wlwEEAECABAFAlG7HSQJED4J
+cibvSzp5AAC/+gH+Lsc5+2O3j1dQ2Zk7FAgEPC7SrO9zTRup6Ckuup7n8BOM
+NWqHhEzi5yH7YvnyPZfZT04oC81CO1L0aKM6A219Wg==
+=DzM1
+-----END PGP PUBLIC KEY BLOCK-----
+   </textarea>
+  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                    Decrypt a Message
+                  </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
+                
+                
+  <div class="block">
+   <form method="post" onsubmit="return decrypt();" name="myform" >
+     <p>Your encrypted message: </p>
+     <textarea name="message" style="width:50%; height: 100px" rows="16" cols="80" id="dec-message">
+-----BEGIN PGP MESSAGE-----
+Version: OpenPGP.js v.1.20130420
+Comment: http://openpgpjs.org
+
+wUwDPglyJu9LOnkBAf0UMtxb3F9/MgUlyc5i7IKMXHUJNL+2dN+3WJ4W/7ZG
+NlZL8oyho3+47DGZn68o56+mgmTt7zKeB7/XI4tyqjiw0lgBk0QgCjlS1r0v
+gNdeH6rTHWjhQU5k4gwbobs8yoHsltq3B6qzjxVn3KaXyQIaLmOEV1KhNq8+
+Z/2SkNnSCfhlgDXhU3cDYEJ9Mqg2Gk5BIqhZRrFFj9Q5
+=tsOo
+-----END PGP MESSAGE-----
+</textarea>
+     <br />
+    <input type="submit" name="mybutton" value="Decrypt Message" />
+   </form>
+  </div>
+  <div class="block">
+   <h2>Your private key</h2>
+   <textarea rows="16" style="width:50%; height: 100px" cols="80" id="dec-privkey">
+-----BEGIN PGP PRIVATE KEY BLOCK-----
+Version: OpenPGP.js v.1.20130420
+Comment: http://openpgpjs.org
+
+xcA4BFG7HSMBAf9rxilz/h34SkppmiIhAnalaWMvXLOHaBliXlrKf/tiBxWj
+DXP3AGO+0qzFFEHfIOCcOgYdyfHPcrSmQwbQHSsLABEBAAEAAf9m6OKeSrFt
+a+rgKXibUpHeYuJ90CPxkRpkDrrdEBYHRIME/ySgBqFncJTjoR4Q8q0bFns6
+ZHq14sqZJAM+HnzhAQC7WmQngm/joUp0U+nS1VRRdFyAm0VjPEvbtuyC1xjG
+WwEAk0NORnDtObt7sWk95i7z+WAEid8FVOvXzF9MH4zuLREBAIsWokhJJ316
+8V9T2D6obelSTn3kPXs+XloMBMdsZ2ioTdjNJFRlc3QgTWNUZXN0aW5ndG9u
+IDx0ZXN0QGV4YW1wbGUuY29tPsJcBBABAgAQBQJRux0kCRA+CXIm70s6eQAA
+v/oB/i7HOftjt49XUNmZOxQIBDwu0qzvc00bqegpLrqe5/ATjDVqh4RM4uch
++2L58j2X2U9OKAvNQjtS9GijOgNtfVo=
+=Pt3C
+-----END PGP PRIVATE KEY BLOCK-----
+   </textarea>
+  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+
+</html>
