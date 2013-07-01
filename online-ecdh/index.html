@@ -1,2 +1,210 @@
-a:x
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href=
+    "https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+    rel="stylesheet" type="text/css">
+    <title>
+      Online ECDH
+    </title>
+    <script src="http://code.jquery.com/jquery-1.10.0.js" type=
+    "text/javascript">
+</script>
+    <script src=
+    "https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"
+    type="text/javascript">
+</script>
+    <script language="JavaScript" type="text/javascript" src="./js/jsbn.js">
+</script>
+    <script language="JavaScript" type="text/javascript" src="./js/jsbn2.js">
+</script>
+    <script language="JavaScript" type="text/javascript" src="./js/prng4.js">
+</script>
+    <script language="JavaScript" type="text/javascript" src="./js/rng.js">
+</script>
+    <script language="JavaScript" type="text/javascript" src="./js/ec.js">
+</script>
+    <script language="JavaScript" type="text/javascript" src="./js/sec.js">
+</script>
+    <script language="JavaScript" type="text/javascript" src="./js/aes.js">
+</script>
+    <script src="./js/mnemonic.js" type="text/javascript" charset="utf-8">
+</script>
+    <script src="./ecdh.js" type="text/javascript" charset="utf-8">
+</script>
+  </head>
+  <body onload="do_init();">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h4>
+            Online Eliptic Curve Encryption
+          </h4>
+          <p>
+            Runs completely in the browser.
+          </p>
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent=
+                "#accordion2" href="#collapseOne">Generate Keys of Message
+                Sender</a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                  <div class="block">
+                    <form method="post" onsubmit="return generate();" name=
+                    "myform" id="myform">
+                      <br>
+                      <input type="submit" name="mybutton" value=
+                      "Generate Keys">
+                    </form>
+                  </div>
+                  <div class="block">
+                    <h4>
+                      Public Key
+                    </h4>
+                    <textarea style="width:50%; height: 100px" id="pubgenkey">
+</textarea>
+                    <h4>
+                      Public Key Compressed
+                    </h4>
+                    <textarea style="width:50%; height: 100px" id="pubcomp">
+</textarea>
+                    <h4>
+                      Private Key
+                    </h4>
+                    <textarea style="width:50%; height: 100px" id="privgenkey">
+                 
+</textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent=
+                "#accordion2" href="#collapseTwo">Generate Keys of Message
+                Receiver</a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="block">
+                    <form method="post" onsubmit="return generateRecv();" name=
+                    "myform" id="myform">
+                      <br>
+                      <input type="submit" name="mybutton" value=
+                      "Generate Keys">
+                    </form>
+                  </div>
+                  <div class="block">
+                    <h4>
+                      Public Key
+                    </h4>
+                    <textarea style="width:50%; height: 100px" id="recvPubKey">
+</textarea>
+                    <h4>
+                      Public Key Compressed
+                    </h4>
+                    <textarea style="width:50%; height: 100px" id="recvcomp">
+</textarea>
+                    <h4>
+                      Private Key
+                    </h4>
+                    <textarea style="width:50%; height: 100px" id=
+                    "recvPrivKey">
+                 
+</textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent=
+                "#accordion2" href="#collapseThree">Encrypt the Senders
+                Message</a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div id="title"></div>
+                  <div class="block">
+                    <form method="post" onsubmit="return encrypt();" name=
+                    "myform" id="myform">
+                      <p>
+                        Your message:
+                      </p>
+                      <textarea style="width:50%; height: 100px" name="message"
+                      rows="16" cols="80" id="message">
+Here is my secret message
+    
+</textarea><br>
+                      <input type="submit" name="mybutton" value="Encrypt">
+                    </form>
+                  </div>
+                  <div class="block">
+                    <p>
+                      Shared Key.
+                    </p>
+                    <textarea style="width:50%; height: 100px" rows="16" cols=
+                    "80" id="enc-sharedkey">
+</textarea>
+                    <p>
+                      AES Encrypted Message.
+                    </p>
+                    <textarea style="width:50%; height: 100px" rows="16" cols=
+                    "80" id="enc-message">
+ 
+</textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent=
+                "#accordion2" href="#collapseFour">Decrypt the Senders
+                Message</a>
+              </div>
+              <div id="collapseFour" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="block">
+                    <form method="post" onsubmit="return decrypt();" name=
+                    "myform" id="myform">
+                      <p>
+                        The encrypted message:
+                      </p>
+                      <textarea name="message" style="width:50%; height: 100px"
+                      rows="16" cols="80" id="dec-message">
+</textarea><br>
+                      <input type="submit" name="mybutton" value=
+                      "Decrypt Message">
+                    </form>
+                  </div>
+                  <div class="block">
+                    <p>
+                      Shared Key.
+                    </p>
+                    <textarea style="width:50%; height: 100px" rows="16" cols=
+                    "80" id="dec-sharedkey">
+</textarea>
+                    <p>
+                      Decrypted Message.
+                    </p>
+                    <textarea style="width:50%; height: 100px" rows="16" cols=
+                    "80" id="result">
+ 
+</textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
