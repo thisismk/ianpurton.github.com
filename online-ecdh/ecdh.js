@@ -43,20 +43,19 @@ function encrypt() {
     alert("Please enter a private key first");
     return false;
   }
-  if($('#recvPubKey').val().trim().length == 0) {
+  if($('#recvcomp').val().trim().length == 0) {
     alert("Please enter the recipients public key first");
     return false;
   }
   var curve = get_curve();
   
-  var pubkey = $('#recvPubKey').val().split(",");
-  var pubx = pubkey[0];  
-  var puby = pubkey[1]; 
+  var pubkey = $('#recvcomp').val();
   var priv = $('#privgenkey').val(); 
   
-  var P = new ECPointFp(curve,
-    curve.fromBigInteger(new BigInteger(pubx)),
-    curve.fromBigInteger(new BigInteger(puby)));
+  var P = curve.decodePointHex(pubkey);
+  pubx = P.getX().toBigInteger().toString();
+  puby = P.getY().toBigInteger().toString();
+  
   var a = new BigInteger(priv);
   var S = P.multiply(a);
   
@@ -75,20 +74,16 @@ function decrypt() {
     alert("Please enter recipients private key first");
     return;
   }
-  if($('#pubgenkey').val().trim().length == 0) {
+  if($('#pubcomp').val().trim().length == 0) {
     alert("Please enter a public key of the originator first");
     return;
   }
   
   var privkey = $('#recvPrivKey').val();
-  var pubkey = $('#pubgenkey').val().split(",");
-  var pubx = pubkey[0];  
-  var puby = pubkey[1]; 
+  var pubkey = $('#pubcomp').val();
   
   var curve = get_curve();
-  var P = new ECPointFp(curve,
-    curve.fromBigInteger(new BigInteger(pubx)),
-    curve.fromBigInteger(new BigInteger(puby)));
+  var P = curve.decodePointHex(pubkey);
   var a = new BigInteger(privkey);
   var S = P.multiply(a);
   
@@ -102,7 +97,7 @@ function decrypt() {
 }
 
 function bytesToHex(bytes) {
-  			for (var hex = [], i = 0; i < bytes.length; i++) {
+				for (var hex = [], i = 0; i < bytes.length; i++) {
 					hex.push((bytes[i] >>> 4).toString(16));
 					hex.push((bytes[i] & 0xF).toString(16));
 				}
@@ -123,16 +118,16 @@ function generate_public(c, pubEle, privEle, compEle) {
   var a = new BigInteger($(privEle).val());
   var P = G.multiply(a);
   
-  var pubx = P.getX().toBigInteger().toString();
-  var puby = P.getY().toBigInteger().toString();
+  //var pubx = P.getX().toBigInteger().toString();
+  //var puby = P.getY().toBigInteger().toString();
   
-  $(pubEle).val(pubx + "," + puby);
+  //$(pubEle).val(pubx + "," + puby);
   
   var hexcomp = bytesToHex(P.getEncoded(true)).toString().toUpperCase();
-  P = curve.decodePointHex(hexcomp);
-  pubx = P.getX().toBigInteger().toString();
-  puby = P.getY().toBigInteger().toString();
+  //P = curve.decodePointHex(hexcomp);
+  //pubx = P.getX().toBigInteger().toString();
+  //puby = P.getY().toBigInteger().toString();
   
-  $(compEle).val(hexcomp + ' ' + pubx + "," + puby);
+  $(compEle).val(hexcomp);
   
 }
