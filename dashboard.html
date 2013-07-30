@@ -480,13 +480,13 @@ $(document).ready(function() {
     }
   });
   
-  $('.time').text(moment().format("HH:MM"));
+  $('.time').text(moment().format("HH:mm"));
   $('.day').text(moment().format("dddd"));
   $('.full-date').text(moment().format("MMMM DD YYYY"));
   
   setTimeout(function() {
     // Do something after 30 seconds
-    $('.time').text(moment().format("HH:MM"));
+    $('.time').text(moment().format("HH:mm"));
     $('.day').text(moment().format("dddd"));
     $('.full-date').text(moment().format("MMMM DD YYYY"));
   }, 30000);
