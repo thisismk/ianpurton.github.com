@@ -107,10 +107,10 @@
             </header>
             <section class="widget-body clock-widget">
               <div class="widget-canvas">
-                <time class="time t-size-x60">7:30<sub>AM</sub></time>
+                <time class="time t-size-x60">7:30</time>
                 <time class="date t-secondary t-size-x20">
-                <span class="day">Tuesday</span>
-                <span class="full-date">30 Jul 2013</span>
+                <span class="day">Monday</span>
+                <span class="full-date">35 Jul 2013</span>
                 </time>
               </div>
               <!-- .widget-canvas -->
@@ -434,52 +434,63 @@
           </div>
         </article>-->
       </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script src="https://rawgithub.com/timrwood/moment/2.1.0/min/moment.min.js"></script>
-      <script>
-        $(document).ready(function() {
-          var date_string = moment().format("MMMM-YYYY");
-          
-          $.ajax({
-            url: "http://api.openkeyval.org/Status2K-Purchases-" + date_string,
-            dataType: "jsonp",
-            success: function(data){
-              $('#status2k-purchases').text(parseInt(data) * 30);
-            }
-          });
-          
-          $.ajax({
-            url: "http://api.openkeyval.org/StrongCoin-Signups-" + date_string,
-            dataType: "jsonp",
-            success: function(data){
-              $('#strongcoin-signups').text(data);
-            }
-          });
-          
-          $.ajax({
-            url: "http://api.openkeyval.org/StrongCoin-Payments-" + date_string,
-            dataType: "jsonp",
-            success: function(data){
-              $('#strongcoin-payments').text(data);
-            }
-          });
-          
-          $.ajax({
-            url: "http://api.openkeyval.org/SMHQ-Signups-" + date_string,
-            dataType: "jsonp",
-            success: function(data){
-              $('#smhq-signups').text(data);
-            }
-          });
-          
-          $.ajax({
-            url: "http://api.openkeyval.org/SMHQ-Servers-Commissioned-" + date_string,
-            dataType: "jsonp",
-            success: function(data){
-              $('#smhq-servers').text(data);
-            }
-          });
-        });
-      </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://rawgithub.com/timrwood/moment/2.1.0/min/moment.min.js"></script>
+<script>
+$(document).ready(function() {
+  var date_string = moment().format("MMMM-YYYY");
+  
+  $.ajax({
+    url: "http://api.openkeyval.org/Status2K-Purchases-" + date_string,
+    dataType: "jsonp",
+    success: function(data){
+      $('#status2k-purchases').text(parseInt(data) * 30);
+    }
+  });
+  
+  $.ajax({
+    url: "http://api.openkeyval.org/StrongCoin-Signups-" + date_string,
+    dataType: "jsonp",
+    success: function(data){
+      $('#strongcoin-signups').text(data);
+    }
+  });
+  
+  $.ajax({
+    url: "http://api.openkeyval.org/StrongCoin-Payments-" + date_string,
+    dataType: "jsonp",
+    success: function(data){
+      $('#strongcoin-payments').text(data);
+    }
+  });
+  
+  $.ajax({
+    url: "http://api.openkeyval.org/SMHQ-Signups-" + date_string,
+    dataType: "jsonp",
+    success: function(data){
+      $('#smhq-signups').text(data);
+    }
+  });
+  
+  $.ajax({
+    url: "http://api.openkeyval.org/SMHQ-Servers-Commissioned-" + date_string,
+    dataType: "jsonp",
+    success: function(data){
+      $('#smhq-servers').text(data);
+    }
+  });
+  
+  $('.time').text(moment().format("HH:MM"));
+  $('.day').text(moment().format("dddd"));
+  $('.full-date').text(moment().format("MMMM DD YYYY"));
+  
+  setTimeout(function() {
+    // Do something after 30 seconds
+    $('.time').text(moment().format("HH:MM"));
+    $('.day').text(moment().format("dddd"));
+    $('.full-date').text(moment().format("MMMM DD YYYY"));
+  }, 30000);
+});
+</script>
   </body>
 </html>
