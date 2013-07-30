@@ -6,522 +6,484 @@
     <link href="https://d28q98t4icjy0h.cloudfront.net/assets/dashboard-6bafed1cb48e756b00522f6db0c0da05.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
-  <body style="margin-top: 60px">
-    <!--<table class="table">
-      <tr>
-        <th>Project</th>
-        <th>Visitors</th>
-        <th>Signups</th>
-        <th>Custom</th>
-        <th>Revenue ($)</th>
-        </td>
-      </tr>
-      <tr>
-        <td>Status2K</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td><span id="status2k-purchases">Waiting...</span></td>
-      </tr>
-      <tr>
-        <td>StrongCoin</td>
-        <td>&nbsp;</td>
-        <td><span id="strongcoin-signups">Waiting...</span></td>
-        <td><span id="strongcoin-payments">Waiting...</span></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>SMHQ</td>
-        <td>&nbsp;</td>
-        <td><span id="smhq-signups">Waiting...</span></td>
-        <td><span id="smhq-servers">Waiting...</span> Servers</td>
-        <td>&nbsp;</td>
-      </tr>
-    </table>-->
-    <body style="width: auto;">
-      <div id="dashboard" class="dashboard-sized-el" style="max-width: 1190px; width: 1190px; height: 933px;">
-        <article class="widget custom-widgets loaded" id="widget-8486" style="top: 0px; left: 480px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>Status2K (This Month)</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body number-widget">
-              <div class="widget-canvas">
-                <div class="main-stat t-size-x60">
-                  $<span id="status2k-purchases">0.</span>
-                </div>
-                <!--<div class="secondary-stat t-size-x48 negative arrow-down-medium">
-                  <span>21<sup>.43%</sup></span>
+  <body style="width: auto;">
+    <div id="dashboard" class="dashboard-sized-el" style="max-width: 1190px; width: 1190px; height: 933px;">
+      <article class="widget custom-widgets loaded" id="widget-8486" style="top: 0px; left: 480px; width: auto;">
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>Status2K (This Month)</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body number-widget">
+            <div class="widget-canvas">
+              <div class="main-stat t-size-x60">
+                $<span id="status2k-purchases">0.</span>
+              </div>
+              <!--<div class="secondary-stat t-size-x48 negative arrow-down-medium">
+                <span>21<sup>.43%</sup></span>
                 </div>-->
+            </div>
+            <!-- .widget-canvas -->
+          </section>
+        </div>
+        <!-- .widget-inner -->
+      </article>
+      <article class="widget custom-widgets loaded" id="widget-8487" style="top: 0px; left: 720px; width: auto;">
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>StrongCoin Signups</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body number-widget">
+            <div class="widget-canvas">
+              <div class="main-stat t-size-x60">
+                <span id="strongcoin-signups">0.</span>
               </div>
-              <!-- .widget-canvas -->
-            </section>
-          </div>
-          <!-- .widget-inner -->
-        </article>
-        <article class="widget custom-widgets loaded" id="widget-8487" style="top: 0px; left: 720px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>StrongCoin Signups</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body number-widget">
-              <div class="widget-canvas">
-                <div class="main-stat t-size-x60">
-                  <span id="strongcoin-signups">0.</span>
-                </div>
-                <div class="secondary-stat t-size-x48 positive">
-                  <span id="strongcoin-payments">5</span><br><sup>Payments</sup>
-                </div>
+              <div class="secondary-stat t-size-x48 positive">
+                <span id="strongcoin-payments">5</span><br><sup>Payments</sup>
               </div>
-              <!-- .widget-canvas -->
-            </section>
-          </div>
-          <!-- .widget-inner -->
-        </article>
-        <article class="widget custom-widgets loaded" id="widget-8488" style="top: 240px; left: 480px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>SMHQ Signups (This Month)</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body number-widget">
-              <div class="widget-canvas">
-                <div class="main-stat t-size-x60">
-                  <span id="smhq-signups">0.</span>
-                </div>
-                <div class="secondary-stat t-size-x48 positive">
-                  <span id="smhq-servers">27</span><br><sup>Servers</sup>
-                </div>
+            </div>
+            <!-- .widget-canvas -->
+          </section>
+        </div>
+        <!-- .widget-inner -->
+      </article>
+      <article class="widget custom-widgets loaded" id="widget-8488" style="top: 240px; left: 480px; width: auto;">
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>SMHQ Signups (This Month)</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body number-widget">
+            <div class="widget-canvas">
+              <div class="main-stat t-size-x60">
+                <span id="smhq-signups">0.</span>
               </div>
-              <!-- .widget-canvas -->
-            </section>
-          </div>
-          <!-- .widget-inner -->
-        </article>
-        <article class="widget custom-widgets loaded" id="widget-8488" style="top: 240px; left: 720px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>Bitcoinary (This Month)</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body number-widget">
-              <div class="widget-canvas">
-                <div class="main-stat t-size-x60">
-                  <span id="bitcoinary-revenue">0</span>
-                </div>
-                <div class="secondary-stat t-size-x48 positive">
-                  <span id="bitcoinary-signups">27</span><br><sup>Signups</sup>
-                </div>
+              <div class="secondary-stat t-size-x48 positive">
+                <span id="smhq-servers">27</span><br><sup>Servers</sup>
               </div>
-              <!-- .widget-canvas -->
-            </section>
-          </div>
-          <!-- .widget-inner -->
-        </article>
-        <article class="widget clock loaded" id="widget-8494" style="top: 240px; left: 240px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header class="no-reload">
-              <h1>London</h1>
-            </header>
-            <section class="widget-body clock-widget">
-              <div class="widget-canvas">
-                <time class="time t-size-x60">7:30</time>
-                <time class="date t-secondary t-size-x20">
-                <span class="day">Monday</span>
-                <span class="full-date">35 Jul 2013</span>
-                </time>
+            </div>
+            <!-- .widget-canvas -->
+          </section>
+        </div>
+        <!-- .widget-inner -->
+      </article>
+      <article class="widget custom-widgets loaded" id="widget-8488" style="top: 240px; left: 720px; width: auto;">
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>Bitcoinary (This Month)</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body number-widget">
+            <div class="widget-canvas">
+              <div class="main-stat t-size-x60">
+                <span id="bitcoinary-revenue">0</span>
               </div>
-              <!-- .widget-canvas -->
-            </section>
-          </div>
-          <!-- .widget-inner -->
-        </article>
-        <!--<article class="widget custom-widgets loaded" id="widget-69099" style="top: 240px; left: 0px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>New vs Returning Users</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body highchart-widget">
-              <div class="widget-canvas" data-highcharts-chart="9">
-                <div class="highcharts-container" id="highcharts-20" style="position: relative; overflow: hidden; width: 198px; height: 149px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; font-size: 12px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="198" height="149">
-                    <desc>Created with Highcharts 3.0.2</desc>
-                    <defs>
-                      <clipPath id="highcharts-21">
-                        <rect fill="none" x="0" y="0" width="178" height="92"></rect>
-                      </clipPath>
-                    </defs>
-                    <rect rx="5" ry="5" fill="rgb(35,37,38)" x="0" y="0" width="198" height="149" fill-opacity="0"></rect>
-                    <rect rx="0" ry="0" fill="rgb(35,37,38)" x="10" y="10" width="178" height="92" fill-opacity="0"></rect>
-                    <g class="highcharts-series-group" zIndex="3">
-                      <g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)" style="cursor:pointer;">
-                        <path fill="#058DC7" d="M 88.99266776466698 10.000000746689935 A 36 36 0 0 1 100.14642127005288 80.23094057823292 L 89 46 A 0 0 0 0 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
-                        <path fill="#50B432" d="M 100.11218476196964 80.24206988217637 A 36 36 0 1 1 88.94999672222943 10.000034726791576 L 89 46 A 0 0 0 1 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(-10,2)"></path>
-                      </g>
-                      <g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)"></g>
+              <div class="secondary-stat t-size-x48 positive">
+                <span id="bitcoinary-signups">27</span><br><sup>Signups</sup>
+              </div>
+            </div>
+            <!-- .widget-canvas -->
+          </section>
+        </div>
+        <!-- .widget-inner -->
+      </article>
+      <article class="widget clock loaded" id="widget-8494" style="top: 240px; left: 240px; width: auto;">
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header class="no-reload">
+            <h1>Time and Date</h1>
+          </header>
+          <section class="widget-body clock-widget">
+            <div class="widget-canvas">
+              <time class="time t-size-x60">7:30</time>
+              <time class="date t-secondary t-size-x20">
+              <span class="day">Monday</span>
+              <span class="full-date">35 Jul 2013</span>
+              </time>
+            </div>
+            <!-- .widget-canvas -->
+          </section>
+        </div>
+        <!-- .widget-inner -->
+      </article>
+      <!--<article class="widget custom-widgets loaded" id="widget-69099" style="top: 240px; left: 0px; width: auto;">
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>New vs Returning Users</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body highchart-widget">
+            <div class="widget-canvas" data-highcharts-chart="9">
+              <div class="highcharts-container" id="highcharts-20" style="position: relative; overflow: hidden; width: 198px; height: 149px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; font-size: 12px;">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="198" height="149">
+                  <desc>Created with Highcharts 3.0.2</desc>
+                  <defs>
+                    <clipPath id="highcharts-21">
+                      <rect fill="none" x="0" y="0" width="178" height="92"></rect>
+                    </clipPath>
+                  </defs>
+                  <rect rx="5" ry="5" fill="rgb(35,37,38)" x="0" y="0" width="198" height="149" fill-opacity="0"></rect>
+                  <rect rx="0" ry="0" fill="rgb(35,37,38)" x="10" y="10" width="178" height="92" fill-opacity="0"></rect>
+                  <g class="highcharts-series-group" zIndex="3">
+                    <g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)" style="cursor:pointer;">
+                      <path fill="#058DC7" d="M 88.99266776466698 10.000000746689935 A 36 36 0 0 1 100.14642127005288 80.23094057823292 L 89 46 A 0 0 0 0 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
+                      <path fill="#50B432" d="M 100.11218476196964 80.24206988217637 A 36 36 0 1 1 88.94999672222943 10.000034726791576 L 89 46 A 0 0 0 1 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(-10,2)"></path>
                     </g>
-                    <g class="highcharts-legend" zIndex="7" transform="translate(15,107)">
-                      <rect rx="5" ry="5" fill="none" x="0.5" y="0.5" width="167" height="26" stroke-opacity="0" stroke="rgb(35,37,38)" stroke-width="1" visibility="visible"></rect>
-                      <g zIndex="1">
-                        <g>
-                          <g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)">
-                            <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
-                              <tspan x="21">New</tspan>
-                            </text>
-                            <rect rx="2" ry="2" fill="#058DC7" x="0" y="4" width="16" height="12" zIndex="3"></rect>
-                          </g>
-                          <g class="highcharts-legend-item" zIndex="1" transform="translate(88,3)">
-                            <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
-                              <tspan x="21">Returning</tspan>
-                            </text>
-                            <rect rx="2" ry="2" fill="#50B432" x="0" y="4" width="16" height="12" zIndex="3"></rect>
-                          </g>
+                    <g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)"></g>
+                  </g>
+                  <g class="highcharts-legend" zIndex="7" transform="translate(15,107)">
+                    <rect rx="5" ry="5" fill="none" x="0.5" y="0.5" width="167" height="26" stroke-opacity="0" stroke="rgb(35,37,38)" stroke-width="1" visibility="visible"></rect>
+                    <g zIndex="1">
+                      <g>
+                        <g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)">
+                          <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
+                            <tspan x="21">New</tspan>
+                          </text>
+                          <rect rx="2" ry="2" fill="#058DC7" x="0" y="4" width="16" height="12" zIndex="3"></rect>
+                        </g>
+                        <g class="highcharts-legend-item" zIndex="1" transform="translate(88,3)">
+                          <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
+                            <tspan x="21">Returning</tspan>
+                          </text>
+                          <rect rx="2" ry="2" fill="#50B432" x="0" y="4" width="16" height="12" zIndex="3"></rect>
                         </g>
                       </g>
                     </g>
-                    <g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" visibility="hidden" transform="translate(0,0)">
-                      <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></rect>
-                      <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></rect>
-                      <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></rect>
-                      <rect rx="3" ry="3" fill="rgb(255,255,255)" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85"></rect>
-                      <text x="8" y="21" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;fill:#333333;" zIndex="1"></text>
-                    </g>
-                  </svg>
-                </div>
+                  </g>
+                  <g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" visibility="hidden" transform="translate(0,0)">
+                    <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></rect>
+                    <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></rect>
+                    <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></rect>
+                    <rect rx="3" ry="3" fill="rgb(255,255,255)" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85"></rect>
+                    <text x="8" y="21" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;fill:#333333;" zIndex="1"></text>
+                  </g>
+                </svg>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+        </div>
         </article>
         <article class="widget custom-widgets loaded" id="widget-69100" style="top: 480px; left: 0px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>Account Types</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body highchart-widget">
-              <div class="widget-canvas" data-highcharts-chart="10">
-                <div class="highcharts-container" id="highcharts-22" style="position: relative; overflow: hidden; width: 198px; height: 149px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; font-size: 12px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="198" height="149">
-                    <desc>Created with Highcharts 3.0.2</desc>
-                    <defs>
-                      <clipPath id="highcharts-23">
-                        <rect fill="none" x="0" y="0" width="178" height="92"></rect>
-                      </clipPath>
-                    </defs>
-                    <rect rx="5" ry="5" fill="rgb(35,37,38)" x="0" y="0" width="198" height="149" fill-opacity="0"></rect>
-                    <rect rx="0" ry="0" fill="rgb(35,37,38)" x="10" y="10" width="178" height="92" fill-opacity="0"></rect>
-                    <g class="highcharts-series-group" zIndex="3">
-                      <g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)" style="cursor:pointer;">
-                        <path fill="#058DC7" d="M 88.99266776466698 10.000000746689935 A 36 36 0 1 1 61.24448024427364 23.073353426864106 L 89 46 A 0 0 0 1 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
-                        <path fill="#50B432" d="M 61.26742076478439 23.045609375056635 A 36 36 0 0 1 84.4621007921275 10.287152580910181 L 89 46 A 0 0 0 0 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(-5,-9)"></path>
-                        <path fill="#EF561A" d="M 84.49781590254388 10.282632538880847 A 36 36 0 0 1 88.94999672222943 10.000034726791576 L 89 46 A 0 0 0 0 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
-                      </g>
-                      <g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)"></g>
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>Account Types</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body highchart-widget">
+            <div class="widget-canvas" data-highcharts-chart="10">
+              <div class="highcharts-container" id="highcharts-22" style="position: relative; overflow: hidden; width: 198px; height: 149px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; font-size: 12px;">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="198" height="149">
+                  <desc>Created with Highcharts 3.0.2</desc>
+                  <defs>
+                    <clipPath id="highcharts-23">
+                      <rect fill="none" x="0" y="0" width="178" height="92"></rect>
+                    </clipPath>
+                  </defs>
+                  <rect rx="5" ry="5" fill="rgb(35,37,38)" x="0" y="0" width="198" height="149" fill-opacity="0"></rect>
+                  <rect rx="0" ry="0" fill="rgb(35,37,38)" x="10" y="10" width="178" height="92" fill-opacity="0"></rect>
+                  <g class="highcharts-series-group" zIndex="3">
+                    <g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)" style="cursor:pointer;">
+                      <path fill="#058DC7" d="M 88.99266776466698 10.000000746689935 A 36 36 0 1 1 61.24448024427364 23.073353426864106 L 89 46 A 0 0 0 1 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
+                      <path fill="#50B432" d="M 61.26742076478439 23.045609375056635 A 36 36 0 0 1 84.4621007921275 10.287152580910181 L 89 46 A 0 0 0 0 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(-5,-9)"></path>
+                      <path fill="#EF561A" d="M 84.49781590254388 10.282632538880847 A 36 36 0 0 1 88.94999672222943 10.000034726791576 L 89 46 A 0 0 0 0 0 89 46 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
                     </g>
-                    <g class="highcharts-legend" zIndex="7" transform="translate(-1,107)">
-                      <rect rx="5" ry="5" fill="none" x="0.5" y="0.5" width="207" height="26" stroke-opacity="0" stroke="rgb(35,37,38)" stroke-width="1" visibility="visible"></rect>
-                      <g zIndex="1">
-                        <g>
-                          <g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)">
-                            <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
-                              <tspan x="21">Free</tspan>
-                            </text>
-                            <rect rx="2" ry="2" fill="#058DC7" x="0" y="4" width="16" height="12" zIndex="3"></rect>
-                          </g>
-                          <g class="highcharts-legend-item" zIndex="1" transform="translate(63,3)">
-                            <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
-                              <tspan x="21">Basic</tspan>
-                            </text>
-                            <rect rx="2" ry="2" fill="#50B432" x="0" y="4" width="16" height="12" zIndex="3"></rect>
-                          </g>
-                          <g class="highcharts-legend-item" zIndex="1" transform="translate(118,3)">
-                            <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
-                              <tspan x="21">Premium</tspan>
-                            </text>
-                            <rect rx="2" ry="2" fill="#EF561A" x="0" y="4" width="16" height="12" zIndex="3"></rect>
-                          </g>
+                    <g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)"></g>
+                  </g>
+                  <g class="highcharts-legend" zIndex="7" transform="translate(-1,107)">
+                    <rect rx="5" ry="5" fill="none" x="0.5" y="0.5" width="207" height="26" stroke-opacity="0" stroke="rgb(35,37,38)" stroke-width="1" visibility="visible"></rect>
+                    <g zIndex="1">
+                      <g>
+                        <g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)">
+                          <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
+                            <tspan x="21">Free</tspan>
+                          </text>
+                          <rect rx="2" ry="2" fill="#058DC7" x="0" y="4" width="16" height="12" zIndex="3"></rect>
+                        </g>
+                        <g class="highcharts-legend-item" zIndex="1" transform="translate(63,3)">
+                          <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
+                            <tspan x="21">Basic</tspan>
+                          </text>
+                          <rect rx="2" ry="2" fill="#50B432" x="0" y="4" width="16" height="12" zIndex="3"></rect>
+                        </g>
+                        <g class="highcharts-legend-item" zIndex="1" transform="translate(118,3)">
+                          <text x="21" y="15" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color:#274b6d;fill:#274b6d;" text-anchor="start" zIndex="2">
+                            <tspan x="21">Premium</tspan>
+                          </text>
+                          <rect rx="2" ry="2" fill="#EF561A" x="0" y="4" width="16" height="12" zIndex="3"></rect>
                         </g>
                       </g>
                     </g>
-                    <g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" visibility="hidden" transform="translate(0,0)">
-                      <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></rect>
-                      <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></rect>
-                      <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></rect>
-                      <rect rx="3" ry="3" fill="rgb(255,255,255)" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85"></rect>
-                      <text x="8" y="21" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;fill:#333333;" zIndex="1"></text>
-                    </g>
-                  </svg>
-                </div>
+                  </g>
+                  <g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" visibility="hidden" transform="translate(0,0)">
+                    <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></rect>
+                    <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></rect>
+                    <rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></rect>
+                    <rect rx="3" ry="3" fill="rgb(255,255,255)" x="0.5" y="0.5" width="16" height="16" fill-opacity="0.85"></rect>
+                    <text x="8" y="21" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;fill:#333333;" zIndex="1"></text>
+                  </g>
+                </svg>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+        </div>
         </article>
         <article class="widget chartbeat loaded" id="widget-14719297" style="top: 480px; left: 720px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>Live Visitors</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body geckometer-widget">
-              <div class="widget-canvas">
-                <div class="value t-size-x48">42</div>
-                <div class="scale">
-                  <div class="pointer-canvas" style="left: 38px; bottom: -2px;">
-                    <img class="pointer" src="https://d28q98t4icjy0h.cloudfront.net/assets/icons/geckometer-pointer.png" style="-webkit-transform: rotate(-24deg);">
-                  </div>
-                </div>
-                <div class="min">
-                  <div class="t-size-x14 t-secondary">30 day min</div>
-                  <div class="t-size-x14 negative">2</div>
-                </div>
-                <div class="max">
-                  <div class="t-size-x14 t-secondary">30 day max</div>
-                  <div class="t-size-x14 positive">124</div>
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>Live Visitors</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body geckometer-widget">
+            <div class="widget-canvas">
+              <div class="value t-size-x48">42</div>
+              <div class="scale">
+                <div class="pointer-canvas" style="left: 38px; bottom: -2px;">
+                  <img class="pointer" src="https://d28q98t4icjy0h.cloudfront.net/assets/icons/geckometer-pointer.png" style="-webkit-transform: rotate(-24deg);">
                 </div>
               </div>
-            </section>
-          </div>
+              <div class="min">
+                <div class="t-size-x14 t-secondary">30 day min</div>
+                <div class="t-size-x14 negative">2</div>
+              </div>
+              <div class="max">
+                <div class="t-size-x14 t-secondary">30 day max</div>
+                <div class="t-size-x14 positive">124</div>
+              </div>
+            </div>
+          </section>
+        </div>
         </article>
         <article class="widget pingdom loaded" id="widget-14730216" style="top: 0px; left: 240px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>Uptime</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body monitoring-widget">
-              <div class="widget-canvas">
-                <div class="status t-size-x60 positive arrow-up-large">up</div>
-                <div class="server-times">
-                  <div class="server-time downtime">
-                    <div class="label t-size-x10">Last downtime</div>
-                    <div class="t-size-x24 t-main">33d 13h </div>
-                  </div>
-                  <div class="server-time uptime">
-                    <div class="label t-size-x10">Response time</div>
-                    <div class="t-size-x24 t-main">324ms</div>
-                  </div>
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>Uptime</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body monitoring-widget">
+            <div class="widget-canvas">
+              <div class="status t-size-x60 positive arrow-up-large">up</div>
+              <div class="server-times">
+                <div class="server-time downtime">
+                  <div class="label t-size-x10">Last downtime</div>
+                  <div class="t-size-x24 t-main">33d 13h </div>
+                </div>
+                <div class="server-time uptime">
+                  <div class="label t-size-x10">Response time</div>
+                  <div class="t-size-x24 t-main">324ms</div>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+        </div>
         </article>-->
-        <article class="widget uservoice loaded" id="widget-14778024" style="top: 0px; left: 240px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>Customer Feedback</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body ragcolumn-widget">
-              <div class="widget-canvas">
-                <div class="column">
-                  <div class="negative" style="height:25%"></div>
-                  <div class="level" style="height:63%"></div>
-                  <div class="positive" style="height:13%"></div>
-                </div>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="t-size-x36 number negative">
-                        2
-                      </td>
-                      <td class="t-secondary">inbox</td>
-                    </tr>
-                    <tr>
-                      <td class="t-size-x36 number level">
-                        5
-                      </td>
-                      <td class="t-secondary">active</td>
-                    </tr>
-                    <tr>
-                      <td class="t-size-x36 number positive">
-                        1
-                      </td>
-                      <td class="t-secondary">closed</td>
-                    </tr>
-                  </tbody>
-                </table>
+      <article class="widget uservoice loaded" id="widget-14778024" style="top: 0px; left: 240px; width: auto;">
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>Customer Feedback</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body ragcolumn-widget">
+            <div class="widget-canvas">
+              <div class="column">
+                <div class="negative" style="height:25%"></div>
+                <div class="level" style="height:63%"></div>
+                <div class="positive" style="height:13%"></div>
               </div>
-            </section>
-          </div>
-        </article>
-        <!--<article class="widget google-analytics loaded" id="widget-14808658" style="top: 240px; left: 240px; width: auto;">
-          <div class="widget-inner  widget-size-2x2 large-screen">
-            <header>
-              <h1>Unique Visitors (30 days)</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body number-widget">
-              <div class="widget-canvas">
-                <div class="main-stat t-size-x108">
-                  5<span class="comma">1,</span>607
-                </div>
-                <div class="t-secondary t-size-x36">Past 30 days</div>
-                <div class="sparkline-wrapper">
-                  <div class="sparkline" data-highcharts-chart="2">
-                    <div class="highcharts-container" id="highcharts-4" style="position: relative; overflow: hidden; width: 410px; height: 250px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; font-size: 12px; left: -9px;">
-                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="410" height="250">
-                        <desc>Created with Highcharts 3.0.2</desc>
-                        <defs>
-                          <clipPath id="highcharts-5">
-                            <rect fill="none" x="0" y="0" width="390" height="224"></rect>
-                          </clipPath>
-                        </defs>
-                        <g class="highcharts-grid" zIndex="1"></g>
-                        <g class="highcharts-grid" zIndex="1">
-                          <path fill="none" d="M 10 118.5 L 400 118.5" zIndex="1" opacity="1"></path>
-                          <path fill="none" d="M 10 61.5 L 400 61.5" zIndex="1" opacity="1"></path>
-                          <path fill="none" d="M 10 5.5 L 400 5.5" zIndex="1" opacity="1"></path>
-                          <path fill="none" d="M 10 174.5 L 400 174.5" zIndex="1" opacity="1"></path>
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="t-size-x36 number negative">
+                      2
+                    </td>
+                    <td class="t-secondary">inbox</td>
+                  </tr>
+                  <tr>
+                    <td class="t-size-x36 number level">
+                      5
+                    </td>
+                    <td class="t-secondary">active</td>
+                  </tr>
+                  <tr>
+                    <td class="t-size-x36 number positive">
+                      1
+                    </td>
+                    <td class="t-secondary">closed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </article>
+      <!--<article class="widget google-analytics loaded" id="widget-14808658" style="top: 240px; left: 240px; width: auto;">
+        <div class="widget-inner  widget-size-2x2 large-screen">
+          <header>
+            <h1>Unique Visitors (30 days)</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body number-widget">
+            <div class="widget-canvas">
+              <div class="main-stat t-size-x108">
+                5<span class="comma">1,</span>607
+              </div>
+              <div class="t-secondary t-size-x36">Past 30 days</div>
+              <div class="sparkline-wrapper">
+                <div class="sparkline" data-highcharts-chart="2">
+                  <div class="highcharts-container" id="highcharts-4" style="position: relative; overflow: hidden; width: 410px; height: 250px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; font-size: 12px; left: -9px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="410" height="250">
+                      <desc>Created with Highcharts 3.0.2</desc>
+                      <defs>
+                        <clipPath id="highcharts-5">
+                          <rect fill="none" x="0" y="0" width="390" height="224"></rect>
+                        </clipPath>
+                      </defs>
+                      <g class="highcharts-grid" zIndex="1"></g>
+                      <g class="highcharts-grid" zIndex="1">
+                        <path fill="none" d="M 10 118.5 L 400 118.5" zIndex="1" opacity="1"></path>
+                        <path fill="none" d="M 10 61.5 L 400 61.5" zIndex="1" opacity="1"></path>
+                        <path fill="none" d="M 10 5.5 L 400 5.5" zIndex="1" opacity="1"></path>
+                        <path fill="none" d="M 10 174.5 L 400 174.5" zIndex="1" opacity="1"></path>
+                      </g>
+                      <g class="highcharts-axis" zIndex="2">
+                        <path fill="none" d="M 145.5 230 L 145.5 235" opacity="1"></path>
+                        <path fill="none" d="M 277.5 230 L 277.5 235" opacity="1"></path>
+                        <path fill="none" d="M 13.5 230 L 13.5 235" opacity="1"></path>
+                        <path fill="none" d="M 10 229.5 L 400 229.5" zIndex="7" visibility="visible"></path>
+                      </g>
+                      <g class="highcharts-axis" zIndex="2"></g>
+                      <g class="highcharts-series-group" zIndex="3">
+                        <g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(10,5) scale(1 1)" clip-path="url(#highcharts-5)">
+                          <path fill="none" d="M 3.823529411764706 142.8 L 17.008113590263694 56.7 L 30.19269776876268 15.8 L 43.37728194726167 7.8 L 56.56186612576066 61.2 L 69.74645030425964 64.6 L 82.93103448275863 139.6 L 96.11561866125761 141 L 109.3002028397566 49.4 L 122.48478701825557 86.6 L 135.66937119675455 79.9 L 148.85395537525355 65.6 L 162.03853955375254 87 L 175.22312373225154 195.6 L 188.4077079107505 207.4 L 201.5922920892495 87.5 L 214.7768762677485 77.9 L 227.9614604462475 79.4 L 241.14604462474645 92.8 L 254.33062880324545 94.3 L 267.5152129817444 206.1 L 280.6997971602434 214.7 L 293.8843813387424 86.2 L 307.0689655172414 58.8 L 320.2535496957404 73 L 333.4381338742394 67.8 L 346.6227180527384 98.1 L 359.8073022312374 205.7 L 372.9918864097363 211.9 L 386.1764705882353 8.1" stroke="#F90" stroke-width="2" zIndex="1"></path>
                         </g>
-                        <g class="highcharts-axis" zIndex="2">
-                          <path fill="none" d="M 145.5 230 L 145.5 235" opacity="1"></path>
-                          <path fill="none" d="M 277.5 230 L 277.5 235" opacity="1"></path>
-                          <path fill="none" d="M 13.5 230 L 13.5 235" opacity="1"></path>
-                          <path fill="none" d="M 10 229.5 L 400 229.5" zIndex="7" visibility="visible"></path>
+                        <g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,5) scale(1 1)" clip-path="none">
+                          <path fill="none" d="M -6.1764705882352935 142.8 L 3.823529411764706 142.8 L 17.008113590263694 56.7 L 30.19269776876268 15.8 L 43.37728194726167 7.8 L 56.56186612576066 61.2 L 69.74645030425964 64.6 L 82.93103448275863 139.6 L 96.11561866125761 141 L 109.3002028397566 49.4 L 122.48478701825557 86.6 L 135.66937119675455 79.9 L 148.85395537525355 65.6 L 162.03853955375254 87 L 175.22312373225154 195.6 L 188.4077079107505 207.4 L 201.5922920892495 87.5 L 214.7768762677485 77.9 L 227.9614604462475 79.4 L 241.14604462474645 92.8 L 254.33062880324545 94.3 L 267.5152129817444 206.1 L 280.6997971602434 214.7 L 293.8843813387424 86.2 L 307.0689655172414 58.8 L 320.2535496957404 73 L 333.4381338742394 67.8 L 346.6227180527384 98.1 L 359.8073022312374 205.7 L 372.9918864097363 211.9 L 386.1764705882353 8.1 L 396.1764705882353 8.1" class="highcharts-tracker highcharts-tracker" stroke-linejoin="round" visibility="visible" stroke-opacity="0.0001" stroke="rgb(192,192,192)" stroke-width="22" zIndex="2" style=""></path>
                         </g>
-                        <g class="highcharts-axis" zIndex="2"></g>
-                        <g class="highcharts-series-group" zIndex="3">
-                          <g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(10,5) scale(1 1)" clip-path="url(#highcharts-5)">
-                            <path fill="none" d="M 3.823529411764706 142.8 L 17.008113590263694 56.7 L 30.19269776876268 15.8 L 43.37728194726167 7.8 L 56.56186612576066 61.2 L 69.74645030425964 64.6 L 82.93103448275863 139.6 L 96.11561866125761 141 L 109.3002028397566 49.4 L 122.48478701825557 86.6 L 135.66937119675455 79.9 L 148.85395537525355 65.6 L 162.03853955375254 87 L 175.22312373225154 195.6 L 188.4077079107505 207.4 L 201.5922920892495 87.5 L 214.7768762677485 77.9 L 227.9614604462475 79.4 L 241.14604462474645 92.8 L 254.33062880324545 94.3 L 267.5152129817444 206.1 L 280.6997971602434 214.7 L 293.8843813387424 86.2 L 307.0689655172414 58.8 L 320.2535496957404 73 L 333.4381338742394 67.8 L 346.6227180527384 98.1 L 359.8073022312374 205.7 L 372.9918864097363 211.9 L 386.1764705882353 8.1" stroke="#F90" stroke-width="2" zIndex="1"></path>
-                          </g>
-                          <g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,5) scale(1 1)" clip-path="none">
-                            <path fill="none" d="M -6.1764705882352935 142.8 L 3.823529411764706 142.8 L 17.008113590263694 56.7 L 30.19269776876268 15.8 L 43.37728194726167 7.8 L 56.56186612576066 61.2 L 69.74645030425964 64.6 L 82.93103448275863 139.6 L 96.11561866125761 141 L 109.3002028397566 49.4 L 122.48478701825557 86.6 L 135.66937119675455 79.9 L 148.85395537525355 65.6 L 162.03853955375254 87 L 175.22312373225154 195.6 L 188.4077079107505 207.4 L 201.5922920892495 87.5 L 214.7768762677485 77.9 L 227.9614604462475 79.4 L 241.14604462474645 92.8 L 254.33062880324545 94.3 L 267.5152129817444 206.1 L 280.6997971602434 214.7 L 293.8843813387424 86.2 L 307.0689655172414 58.8 L 320.2535496957404 73 L 333.4381338742394 67.8 L 346.6227180527384 98.1 L 359.8073022312374 205.7 L 372.9918864097363 211.9 L 386.1764705882353 8.1 L 396.1764705882353 8.1" class="highcharts-tracker highcharts-tracker" stroke-linejoin="round" visibility="visible" stroke-opacity="0.0001" stroke="rgb(192,192,192)" stroke-width="22" zIndex="2" style=""></path>
-                          </g>
-                        </g>
-                        <g class="highcharts-axis-labels" zIndex="7"></g>
-                        <g class="highcharts-axis-labels" zIndex="7"></g>
-                      </svg>
-                    </div>
+                      </g>
+                      <g class="highcharts-axis-labels" zIndex="7"></g>
+                      <g class="highcharts-axis-labels" zIndex="7"></g>
+                    </svg>
                   </div>
-                  <span class="t-main sparkline-end-value"><span class="comma">4,</span>857</span>
                 </div>
-                <div class="t-secondary t-size-x44">
-                </div>
+                <span class="t-main sparkline-end-value"><span class="comma">4,</span>857</span>
               </div>
-            </section>
-          </div>
+              <div class="t-secondary t-size-x44">
+              </div>
+            </div>
+          </section>
+        </div>
         </article>
         <article class="widget google-analytics loaded" id="widget-14808659" style="top: 240px; left: 720px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <header>
-              <h1>Avg time on site</h1>
-            </header>
-            <a class="led success" href="#"></a>
-            <section class="widget-body number-widget">
-              <div class="widget-canvas">
-                <div class="main-stat t-size-x52">
-                  9<span class="unit">m</span> 13<span class="unit">s</span>
-                </div>
-                <div class="secondary-stat t-size-x48 negative arrow-down-medium">
-                  <span>4<sup>.18%</sup></span>
-                </div>
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <header>
+            <h1>Avg time on site</h1>
+          </header>
+          <a class="led success" href="#"></a>
+          <section class="widget-body number-widget">
+            <div class="widget-canvas">
+              <div class="main-stat t-size-x52">
+                9<span class="unit">m</span> 13<span class="unit">s</span>
               </div>
-            </section>
-          </div>
+              <div class="secondary-stat t-size-x48 negative arrow-down-medium">
+                <span>4<sup>.18%</sup></span>
+              </div>
+            </div>
+          </section>
+        </div>
         </article>
         <article class="widget gmail loaded" id="widget-14893348" style="top: 240px; left: 960px; width: auto;">
-          <div class="widget-inner  widget-size-1x1 large-screen">
-            <a class="led success" href="#"></a>
-            <section class="widget-body rag-widget no-title">
-              <div class="widget-canvas">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="t-size-x48 number negative">
-                        7<span class="comma">2,</span>849
-                      </td>
-                      <td class="t-secondary">inbox over 3 days old</td>
-                    </tr>
-                    <tr>
-                      <td class="t-size-x48 number level">
-                        120
-                      </td>
-                      <td class="t-secondary">inbox between the last 1 and 2 days old</td>
-                    </tr>
-                    <tr>
-                      <td class="t-size-x48 number positive">
-                        206
-                      </td>
-                      <td class="t-secondary">inbox within the last 1day</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
+        <div class="widget-inner  widget-size-1x1 large-screen">
+          <a class="led success" href="#"></a>
+          <section class="widget-body rag-widget no-title">
+            <div class="widget-canvas">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="t-size-x48 number negative">
+                      7<span class="comma">2,</span>849
+                    </td>
+                    <td class="t-secondary">inbox over 3 days old</td>
+                  </tr>
+                  <tr>
+                    <td class="t-size-x48 number level">
+                      120
+                    </td>
+                    <td class="t-secondary">inbox between the last 1 and 2 days old</td>
+                  </tr>
+                  <tr>
+                    <td class="t-size-x48 number positive">
+                      206
+                    </td>
+                    <td class="t-secondary">inbox within the last 1day</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
         </article>-->
-      </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://rawgithub.com/timrwood/moment/2.1.0/min/moment.min.js"></script>
-<script>
-$(document).ready(function() {
-  populate();
-});
-function populate() {
-  var date_string = moment().format("MMMM-YYYY");
-  
-  $.ajax({
-    url: "http://api.openkeyval.org/Status2K-Purchases-" + date_string,
-    dataType: "jsonp",
-    success: function(data){
-      $('#status2k-purchases').text(parseInt(data) * 30);
-    }
-  });
-  
-  $.ajax({
-    url: "http://api.openkeyval.org/StrongCoin-Signups-" + date_string,
-    dataType: "jsonp",
-    success: function(data){
-      $('#strongcoin-signups').text(data);
-    }
-  });
-  
-  $.ajax({
-    url: "http://api.openkeyval.org/StrongCoin-Payments-" + date_string,
-    dataType: "jsonp",
-    success: function(data){
-      $('#strongcoin-payments').text(data);
-    }
-  });
-  
-  $.ajax({
-    url: "http://api.openkeyval.org/SMHQ-Signups-" + date_string,
-    dataType: "jsonp",
-    success: function(data){
-      $('#smhq-signups').text(data);
-    }
-  });
-  
-  $.ajax({
-    url: "http://api.openkeyval.org/SMHQ-Servers-Commissioned-" + date_string,
-    dataType: "jsonp",
-    success: function(data){
-      $('#smhq-servers').text(data);
-    }
-  });
-  
-  $.ajax({
-    url: "http://api.openkeyval.org/Bitcoinary-Signups-" + date_string,
-    dataType: "jsonp",
-    success: function(data){
-      $('#bitcoinary-signups').text(data);
-    }
-  });
-  
-  $('.time').text(moment().format("HH:mm"));
-  $('.day').text(moment().format("dddd"));
-  $('.full-date').text(moment().format("MMMM DD YYYY"));
-  
-  setTimeout(function() {
-    // Do something after 30 seconds
-    $('.time').text(moment().format("HH:mm"));
-    $('.day').text(moment().format("dddd"));
-    $('.full-date').text(moment().format("MMMM DD YYYY"));
-  }, 30000);
-}
-</script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://rawgithub.com/timrwood/moment/2.1.0/min/moment.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        populate();
+        setInterval(populate, 60000);
+      });
+      function populate() {
+        var date_string = moment().format("MMMM-YYYY");
+        
+        $.ajax({
+          url: "http://api.openkeyval.org/Status2K-Purchases-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#status2k-purchases').text(parseInt(data) * 30);
+          }
+        });
+        
+        $.ajax({
+          url: "http://api.openkeyval.org/StrongCoin-Signups-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#strongcoin-signups').text(data);
+          }
+        });
+        
+        $.ajax({
+          url: "http://api.openkeyval.org/StrongCoin-Payments-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#strongcoin-payments').text(data);
+          }
+        });
+        
+        $.ajax({
+          url: "http://api.openkeyval.org/SMHQ-Signups-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#smhq-signups').text(data);
+          }
+        });
+        
+        $.ajax({
+          url: "http://api.openkeyval.org/SMHQ-Servers-Commissioned-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#smhq-servers').text(data);
+          }
+        });
+        
+        $.ajax({
+          url: "http://api.openkeyval.org/Bitcoinary-Signups-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#bitcoinary-signups').text(data);
+          }
+        });
+        
+        $('.time').text(moment().format("HH:mm"));
+        $('.day').text(moment().format("dddd"));
+        $('.full-date').text(moment().format("MMMM DD YYYY"));
+      }
+    </script>
   </body>
 </html>
