@@ -100,6 +100,26 @@
           </div>
           <!-- .widget-inner -->
         </article>
+        <article class="widget custom-widgets loaded" id="widget-8488" style="top: 240px; left: 720px; width: auto;">
+          <div class="widget-inner  widget-size-1x1 large-screen">
+            <header>
+              <h1>Bitcoinary (This Month)</h1>
+            </header>
+            <a class="led success" href="#"></a>
+            <section class="widget-body number-widget">
+              <div class="widget-canvas">
+                <div class="main-stat t-size-x60">
+                  <span id="bitcoinary-revenue">0</span>
+                </div>
+                <div class="secondary-stat t-size-x48 positive">
+                  <span id="bitcoinary-signups">27</span><br><sup>Signups</sup>
+                </div>
+              </div>
+              <!-- .widget-canvas -->
+            </section>
+          </div>
+          <!-- .widget-inner -->
+        </article>
         <article class="widget clock loaded" id="widget-8494" style="top: 240px; left: 240px; width: auto;">
           <div class="widget-inner  widget-size-1x1 large-screen">
             <header class="no-reload">
@@ -438,6 +458,9 @@
 <script src="https://rawgithub.com/timrwood/moment/2.1.0/min/moment.min.js"></script>
 <script>
 $(document).ready(function() {
+  populate();
+});
+function populate() {
   var date_string = moment().format("MMMM-YYYY");
   
   $.ajax({
@@ -480,6 +503,14 @@ $(document).ready(function() {
     }
   });
   
+  $.ajax({
+    url: "http://api.openkeyval.org/Bitcoinary-Signups-" + date_string,
+    dataType: "jsonp",
+    success: function(data){
+      $('#bitcoinary-signups').text(data);
+    }
+  });
+  
   $('.time').text(moment().format("HH:mm"));
   $('.day').text(moment().format("dddd"));
   $('.full-date').text(moment().format("MMMM DD YYYY"));
@@ -490,7 +521,7 @@ $(document).ready(function() {
     $('.day').text(moment().format("dddd"));
     $('.full-date').text(moment().format("MMMM DD YYYY"));
   }, 30000);
-});
+}
 </script>
   </body>
 </html>
