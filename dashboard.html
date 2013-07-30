@@ -480,6 +480,14 @@
           }
         });
         
+        $.ajax({
+          url: "http://api.openkeyval.org/Bitcoinary-Revenue-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#bitcoinary-revenue').html(data + ' <sup>BTC</sup>');
+          }
+        });
+        
         $('.time').text(moment().format("HH:mm"));
         $('.day').text(moment().format("dddd"));
         $('.full-date').text(moment().format("MMMM DD YYYY"));
