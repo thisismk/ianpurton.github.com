@@ -31,13 +31,13 @@
       <article class="widget custom-widgets loaded" id="widget-8487" style="top: 0px; left: 720px; width: auto;">
         <div class="widget-inner  widget-size-1x1 large-screen">
           <header>
-            <h1>StrongCoin Signups</h1>
+            <h1>StrongCoin</h1>
           </header>
           <a class="led success" href="#"></a>
           <section class="widget-body number-widget">
             <div class="widget-canvas">
               <div class="main-stat t-size-x60">
-                <span id="strongcoin-signups">0.</span>
+                <span id="strongcoin-fees">0.</span>
               </div>
               <div class="secondary-stat t-size-x48 positive">
                 <span id="strongcoin-payments">5</span><br><sup>Payments</sup>
@@ -501,10 +501,10 @@
         });
         
         $.ajax({
-          url: "http://api.openkeyval.org/StrongCoin-Signups-" + date_string,
+          url: "http://api.openkeyval.org/StrongCoin-Fees-" + date_string,
           dataType: "jsonp",
           success: function(data){
-            $('#strongcoin-signups').text(data);
+            $('#strongcoin-fees').text(data);
           }
         });
         
