@@ -40,7 +40,7 @@
                 <span id="strongcoin-fees">0.</span>
               </div>
               <div class="secondary-stat t-size-x48 positive">
-                <span id="strongcoin-payments">5</span><br><sup>Payments</sup>
+                <span id="strongcoin-signups">5</span><br><sup>Signups</sup>
               </div>
             </div>
             <!-- .widget-canvas -->
@@ -509,10 +509,10 @@
         });
         
         $.ajax({
-          url: "http://api.openkeyval.org/StrongCoin-Payments-" + date_string,
+          url: "http://api.openkeyval.org/StrongCoin-Signups-" + date_string,
           dataType: "jsonp",
           success: function(data){
-            $('#strongcoin-payments').text(data);
+            $('#strongcoin-signups').text(data);
           }
         });
         
