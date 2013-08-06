@@ -135,6 +135,7 @@
           <section class="widget-body number-widget">
             <div class="widget-canvas">
               <div class="main-stat t-size-x60">
+                <span id="cw-fees">0</span>
                 
               </div>
               <!--<div class="secondary-stat t-size-x48 negative arrow-down-medium">
@@ -545,6 +546,14 @@
           dataType: "jsonp",
           success: function(data){
             $('#bitcoinary-revenue').html(data + ' <sup>BTC</sup>');
+          }
+        });
+        
+        $.ajax({
+          url: "http://api.openkeyval.org/CW-Fees-" + date_string,
+          dataType: "jsonp",
+          success: function(data){
+            $('#cw-fees').html(data + ' <sup>BTC</sup>');
           }
         });
         
