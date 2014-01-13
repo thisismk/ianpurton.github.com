@@ -491,7 +491,7 @@
         setInterval(populate, 60000);
       });
       function populate() {
-        var date_string = moment().format("MMMM-YYYY");
+        var date_string = "December-2013";
         
         $.ajax({
           url: "http://api.openkeyval.org/Status2K-Purchases-" + date_string,
