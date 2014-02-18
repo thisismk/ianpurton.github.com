@@ -550,8 +550,7 @@
         });
         
         $.ajax({
-          url: "http://api.openkeyval.org/CW-Fees-" + date_string,
-          dataType: "jsonp",
+          url: "https://blockchain.info/q/addressbalance/1carbQXAt6aUcePdFcfS3Z8JNwMCMDb4V" + date_string,
           success: function(data){
             $('#cw-fees').html(data + ' <sup>BTC</sup>');
           }
