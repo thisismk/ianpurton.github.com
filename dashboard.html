@@ -552,7 +552,9 @@
         $.ajax({
           url: "https://blockchain.info/q/addressbalance/1carbQXAt6aUcePdFcfS3Z8JNwMCMDb4V",
           success: function(data){
-            $('#cw-fees').html(data + ' <sup>BTC</sup>');
+            am = parseInt(data);
+            am = am / 100000000;
+            $('#cw-fees').html(am + ' <sup>BTC</sup>');
           }
         });
         
