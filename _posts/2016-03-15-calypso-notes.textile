@@ -3,3 +3,8 @@ layout: post
 title: Calypso Notes
 updated: 15th Mar, 2016
 ---
+
+<h2>Static Data Filters</h2>
+
+Tables are SD\_FILTER, SD\_FILTER\_DOMAIN and SD\_FILTER\_ELEMENT
+
